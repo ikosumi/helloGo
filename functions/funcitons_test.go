@@ -25,6 +25,16 @@ func TestSum(t *testing.T) {
 	got := Sum(inputs...)
 
 	if wants != got {
-		t.Fatalf("got %d, want %d, given sum(%v)\n", got, wants, inputs)
+		t.Fatalf("got %d, want %d, given Sum(%v)\n", got, wants, inputs)
+	}
+}
+
+func TestSumFnWithEven(t *testing.T) {
+	inputs := []int{1, 2, 3, 4}
+	wants := 6
+	got := SumFn(Even, inputs...)
+
+	if wants != got {
+		t.Fatalf("got %d, want %d, given SumFn(Even, %v)\n", got, wants, inputs)
 	}
 }
