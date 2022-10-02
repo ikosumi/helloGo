@@ -4,13 +4,6 @@ import (
 	"fmt"
 )
 
-var x, y, z int
-
-type Ilir struct {
-	a int
-	b int
-}
-
 const (
 	kb = 1 << 10
 	mb = 1024 * kb
@@ -41,13 +34,17 @@ func main() {
 	b := 1
 	binary(b)
 	binary(b >> 2)
+	var me B
+	fmt.Println(me)
+	fmt.Println("a kb is", kb, "bytes")
+	fmt.Println("a mb is", mb, "bytes")
+	fmt.Println("a gb is", gb, "bytes")
+	loops()
 }
 
-func main2() {
+func loops() {
 	ilir := Student{"ilir", 1, "munich"}
 	fmt.Println(ilir.name)
-	//fmt.Printf("%X", 10223224231)
-	//fmt.Printf("%#U", 'ë')
 	fmt.Printf("| \t%s\t | \t%s\t | \t%s\t |\n", "unicode", "unicode", "unicode")
 
 	for i := 0; i < 200; i++ {
@@ -57,14 +54,6 @@ func main2() {
 		}
 		fmt.Println()
 	}
-	//x = 2
-	//x = 3
-	//a := 1
-	//
-	//fmt.Println(x)
-	//fmt.Println("Hi Go")
-	//
-	//fmt.Println(a)
 
 	fmt.Println()
 	fmt.Printf("%T\n", `gee`)
