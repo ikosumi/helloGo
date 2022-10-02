@@ -38,3 +38,13 @@ func TestSumFnWithEven(t *testing.T) {
 		t.Fatalf("got %d, want %d, given SumFn(Even, %v)\n", got, wants, inputs)
 	}
 }
+
+func TestSumFnWithOdd(t *testing.T) {
+	inputs := []int{1, 2, 3, 4}
+	wants := 4
+	got := SumFn(Odd, inputs...)
+
+	if wants != got {
+		t.Fatalf("got %d, want %d, given SumFn(Odd, %v)\n", got, wants, inputs)
+	}
+}
